@@ -22,14 +22,14 @@ var submitRecommendation = function () {
   var title = $("#talkTitle").val();
   var presenter = $("#talkPresenter").val();
   var link = $("#talkLink").val();
-  var tcon = $("#tcon").val();
+  //var tcon = $("#tcon").val();
 
   // Push a new recommendation to the database using those values
   recommendations.push({
     "Name": title,
     "Age": presenter,
     "DOB": link,
-    "WhatsApp Contact No.": tcon
+    //"WhatsApp Contact No.": tcon
   });
 };
 
