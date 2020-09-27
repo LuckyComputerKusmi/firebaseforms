@@ -25,9 +25,9 @@ var submitRecommendation = function () {
 
   // Push a new recommendation to the database using those values
   recommendations.push({
-    "title": title,
-    "presenter": presenter,
-    "link": link
+    "Name": title,
+    "Age": presenter,
+    "DOB": link
   });
 };
 
