@@ -22,26 +22,22 @@ var submitRecommendation = function () {
   var title = $("#talkTitle").val();
   var presenter = $("#talkPresenter").val();
   var link = $("#talkLink").val();
-  var tcon = $("#tcon").val();
+  var contact = $("#tcon").val();
 
   // Push a new recommendation to the database using those values
   recommendations.push({
     "Name": title,
     "Age": presenter,
     "DOB": link,
-    "WhatsApp Contact No.": tcon
+    "Contact": contact
   });
 };
-
 // When the window is fully loaded, call this function.
 // Note: because we are attaching an event listener to a particular HTML element
 // in this function, we can't do that until the HTML element in question has
 // been loaded. Otherwise, we're attaching our listener to nothing, and no code
 // will run when the submit button is clicked.
 $(window).load(function () {
-
-  // Find the HTML element with the id recommendationForm, and when the submit
-  // event is triggered on that element, call submitRecommendation.
   $("#recommendationForm").submit(submitRecommendation);
 
 });
