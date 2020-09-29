@@ -41,7 +41,18 @@
         </div>
 
         <!-- When you click this button, trigger the submit event on this form. -->
-        <button type="submit" class="btn btn-default" id="start_button" onclick="verify()" disabled>Submit</button>
+        <button type="submit" class="btn btn-default" id="btSubmit" disabled>Submit</button>
+        <script>
+            function manage(txt) {
+                var bt = document.getElementById('btSubmit');
+                if (txt.value != '') {
+                    bt.disabled = false;
+                }
+                else {
+                    bt.disabled = true;
+                }
+            }
+        </script>
       </form>
     </div>
   </body>
