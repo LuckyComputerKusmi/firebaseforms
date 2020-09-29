@@ -32,12 +32,25 @@ var submitRecommendation = function () {
     "Contact": contact
   });
 };
-// When the window is fully loaded, call this function.
-// Note: because we are attaching an event listener to a particular HTML element
-// in this function, we can't do that until the HTML element in question has
-// been loaded. Otherwise, we're attaching our listener to nothing, and no code
-// will run when the submit button is clicked.
-$(window).load(function () {
-  $("#recommendationForm").submit(submitRecommendation);
 
-});
+
+function stoppedTyping(){
+    if(this.value.length > 0) { 
+        document.getElementById('start_button').disabled = false; 
+    } else { 
+        document.getElementById('start_button').disabled = true;
+    }
+}
+function verify(){
+    if myText is empty{
+        alert "Put some text in there!"
+        return
+    }
+    else{
+      $(window).load(function () {
+        $("#recommendationForm").submit(submitRecommendation);
+           });
+        
+    }
+}
+
