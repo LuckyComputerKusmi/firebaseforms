@@ -32,8 +32,25 @@ var submitRecommendation = function () {
     "Contact": contact
   });
 };
+$(document).ready(function (){
+    validate();
+    $('#talkTitle, #talkPresenter, #talkLink, #tcon').change(validate);
+});
+
+function validate(){
+    if ($('#talkTitle').val().length   >   0   &&
+        $('#talkPresenter').val().length  >   0   &&
+        $('#talkLink').val().length  >   0   &&
+        $('#tcon').val().length    >   0) {
+        $("input[type=submit]").prop("disabled", false);
+    }
+    else {
+        $("input[type=submit]").prop("disabled", true);
+    }
+}
 
 $(window).load(function () {
   $("#recommendationForm").submit(submitRecommendation);
 });
+
         
